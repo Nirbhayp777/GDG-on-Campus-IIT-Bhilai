@@ -365,7 +365,7 @@ export default function Gallery({
   const activePhoto = currentIndex !== null ? universalPlaylist[currentIndex] : null;
 
   return (
-    <section id="gallery" className="relative py-24 overflow-hidden bg-transparent" ref={sectionRef}>
+    <section id="gallery" className="relative pt-12 pb-24 overflow-hidden bg-transparent" ref={sectionRef}>
       {/* Background Accent Globe Blur */}
       <div 
         className="absolute top-1/2 left-2/3 w-80 h-80 bg-[#4285F4]/5 rounded-full filter blur-[120px] pointer-events-none" 
@@ -374,13 +374,13 @@ export default function Gallery({
 
       <div className="relative w-full">
         {/* Section Heading matching About & Events styling */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-[40px]">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl sm:text-6xl font-display font-extrabold text-white leading-none">
+            <h2 className="text-[28.8px] sm:text-[48px] font-display font-extrabold text-white leading-none">
               <ScrambleText text="Life at GDG IIT Bhilai" />
             </h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-red via-brand-yellow to-brand-green mt-6 rounded-full mx-auto" />
-            <p className="text-lg sm:text-xl font-sans font-normal text-zinc-300 mt-8 leading-relaxed">
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-red via-brand-yellow to-brand-green mt-[19.2px] rounded-full mx-auto" />
+            <p className="text-[14.4px] sm:text-[16px] font-sans font-normal text-zinc-300 mt-[25.6px] leading-relaxed">
               Snapshots of our workshops, speaker sessions, solution development hours, and peer hackfests.
             </p>
           </div>

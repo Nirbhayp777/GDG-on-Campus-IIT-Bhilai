@@ -56,21 +56,20 @@ export default function Hero() {
       <HeroParticles />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 pt-4 sm:pt-8 pb-4">
-        <div className="flex flex-col items-center text-center space-y-5 -translate-y-10 sm:-translate-y-16">
+        <div className="flex flex-col items-center text-center space-y-5 -translate-y-16 sm:-translate-y-28">
           
           {/* Animated GDG Logo Stage - Made Static & Increased Size dramatically */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.0, cubicBezier: [0.16, 1, 0.3, 1] }}
-            className="relative w-[450px] h-[250px] sm:w-[580px] sm:h-[320px] max-w-full flex items-center justify-center overflow-visible select-none -mt-8 -mb-10"
+            className="relative w-[405px] h-[225px] sm:w-[522px] sm:h-[288px] max-w-full flex items-center justify-center overflow-visible select-none mt-6 -mb-17"
           >
             {/* Soft backdrop glow themed with Google Colors */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-red-500/5 to-yellow-500/5 rounded-full blur-3xl opacity-20 pointer-events-none" />
             
             <div 
-              className="absolute transform scale-[0.9] sm:scale-[1.15] origin-center"
-              style={{ width: 500, height: 320 }}
+              className="absolute inset-0 flex items-center justify-center transform scale-[0.81] sm:scale-[1.035] origin-center"
             >
               <GdgLogo activeState="logo" isHeroLogo={true} />
             </div>
@@ -84,13 +83,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="space-y-4"
           >
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight leading-none">
+            <h1 className="text-[32.4px] sm:text-[54px] lg:text-[64.8px] font-display font-extrabold text-white tracking-tight leading-none">
               <ScrambleText text="GDG on Campus" duration={1.2} /> <br />
               <span className="text-gradient-google">
                 <ScrambleText text="IIT Bhilai" duration={1.2} delay={0.25} />
               </span>
             </h1>
-            <p className="text-xs sm:text-sm font-sans font-medium text-gray-400 tracking-[0.12em] uppercase mt-2">
+            <p className="text-[10.8px] sm:text-[12.6px] font-sans font-medium text-gray-400 tracking-[0.12em] uppercase mt-[7.2px]">
               Google Developer Groups • Indian Institute of Technology Bhilai
             </p>
           </motion.div>
@@ -101,9 +100,9 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.0, delay: 0.3 }}
-            className="w-full max-w-md bg-[#141416]/10 backdrop-blur-md py-2.5 px-4 rounded-xl border border-white/20 shadow-sm relative group"
+            className="w-full max-w-[403.2px] bg-[#141416]/10 backdrop-blur-md py-[9px] px-[14.4px] rounded-xl border border-white/20 shadow-sm relative group"
           >
-            <p className="text-xs sm:text-sm font-sans italic text-gray-400 leading-relaxed font-semibold">
+            <p className="text-[10.8px] sm:text-[12.6px] font-sans italic text-gray-400 leading-relaxed font-semibold">
               Design. Develop. Deliver. Shaping the future of technology, together.
             </p>
           </motion.div>
@@ -125,14 +124,14 @@ export default function Hero() {
                 textColor="#ffffff"
                 showIcon={true}
                 icon="arrow-up-right"
-                iconSize={15}
-                iconGap={8}
+                iconSize={13.5}
+                iconGap={7.2}
                 iconAnimation="slide"
                 borderRadius={100}
-                padding="14px 28px"
+                padding="12.6px 25.2px"
                 font={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "14px",
+                  fontSize: "12.6px",
                   fontWeight: 500,
                   letterSpacing: "-0.01em",
                 }}
@@ -162,14 +161,14 @@ export default function Hero() {
                 textColor="#ffffff"
                 showIcon={true}
                 icon="calendar"
-                iconSize={15}
-                iconGap={8}
+                iconSize={13.5}
+                iconGap={7.2}
                 iconAnimation="bounce"
                 borderRadius={100}
-                padding="14px 28px"
+                padding="12.6px 25.2px"
                 font={{
                   fontFamily: "Inter, sans-serif",
-                  fontSize: "14px",
+                  fontSize: "12.6px",
                   fontWeight: 500,
                   letterSpacing: "-0.01em",
                 }}

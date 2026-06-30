@@ -33,7 +33,7 @@ export default function About() {
 
       // Set initial layover states for cards 1, 2, 3
       gsap.set(cards.slice(1), {
-        y: 320,
+        y: 256,
         opacity: 0,
         scale: 0.92,
       });
@@ -44,7 +44,7 @@ export default function About() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top 80px',
-            end: `+=${cards.length * 210}`,
+            end: `+=${cards.length * 168}`,
             pin: true,
             pinSpacing: true,
             scrub: true,
@@ -148,7 +148,7 @@ export default function About() {
   ];
 
   return (
-    <section ref={sectionRef} id="about" className="relative pt-12 pb-12 overflow-hidden bg-black">
+    <section ref={sectionRef} id="about" className="relative pt-12 pb-4 overflow-hidden bg-black">
       
       {/* Background Glow */}
       <div className="absolute top-1/3 left-10 w-80 h-80 bg-brand-blue/10 rounded-full filter blur-[100px] pointer-events-none" />
@@ -156,14 +156,14 @@ export default function About() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-left mb-16 max-w-4xl">
-          <h2 className="text-4xl sm:text-6xl font-display font-extrabold text-white leading-none">
+        <div className="text-left mb-[40px] max-w-4xl">
+          <h2 className="text-[28.8px] sm:text-[48px] font-display font-extrabold text-white leading-none">
             <ScrambleText text="Who We Are & What We Do" />
           </h2>
-          <div className="h-1.5 w-24 bg-gradient-to-r from-brand-blue via-brand-red to-brand-green mt-6 rounded-full" />
+          <div className="h-1.5 w-24 bg-gradient-to-r from-brand-blue via-brand-red to-brand-green mt-[19.2px] rounded-full" />
           
           {/* Condensed Core Community Paragraph - Out in the open under the title */}
-          <p className="text-lg sm:text-xl font-sans font-normal text-zinc-300 mt-8 leading-relaxed">
+          <p className="text-[14.4px] sm:text-[16px] font-sans font-normal text-zinc-300 mt-[25.6px] leading-relaxed">
             We are the primary student-led developer network at IIT Bhilai, bridging the gap between computer science theory and real-world system deployments using Google technologies.
           </p>
         </div>
@@ -179,10 +179,10 @@ export default function About() {
               </h3>
             </div>
             
-            <div className="relative w-full pb-16">
+            <div className="relative w-full pb-8">
               <div 
                 ref={cardsContainerRef}
-                className="relative w-full h-[280px] sm:h-[320px]"
+                className="relative w-full h-[224px] sm:h-[256px]"
               >
                 {objectives.map((obj, idx) => {
                   const ObjIcon = obj.icon;
@@ -204,18 +204,18 @@ export default function About() {
                       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(66,133,244,0.32),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                       <div className="relative z-10 flex flex-col items-center w-full">
-                        {/* Minimalist icon container */}
+                         {/* Minimalist icon container */}
                         <div className="mb-4 sm:mb-6 text-zinc-500 group-hover:text-[#4285F4] transition-colors duration-500">
-                          <ObjIcon size={42} strokeWidth={1.25} />
+                          <ObjIcon size={34} strokeWidth={1.25} />
                         </div>
 
                         {/* Title */}
-                        <h4 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-2 sm:mb-4">
+                        <h4 className="text-[16px] sm:text-[19.2px] font-bold text-white tracking-tight mb-2 sm:mb-3">
                           {obj.title}
                         </h4>
 
                         {/* Description */}
-                        <p className="text-xs sm:text-base font-semibold text-zinc-200 group-hover:text-zinc-100 transition-colors duration-300 leading-relaxed max-w-sm sm:max-w-xs">
+                        <p className="text-[9.6px] sm:text-[12.8px] font-semibold text-zinc-200 group-hover:text-zinc-100 transition-colors duration-300 leading-relaxed max-w-sm sm:max-w-xs">
                           {obj.desc}
                         </p>
                       </div>
@@ -266,13 +266,13 @@ function RotatingTechWheel() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
-        setRadius(110);
+        setRadius(80);
       } else if (window.innerWidth < 1024) {
-        setRadius(150);
+        setRadius(112);
       } else if (window.innerWidth < 1280) {
-        setRadius(205);
+        setRadius(152);
       } else {
-        setRadius(250);
+        setRadius(188);
       }
     };
     handleResize();
@@ -314,10 +314,10 @@ function RotatingTechWheel() {
   return (
     <div 
       ref={containerRef}
-      className="relative w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:w-[560px] lg:h-[560px] xl:w-[680px] xl:h-[680px] flex items-center justify-center lg:-mr-28 xl:-mr-36 mt-4 lg:mt-0 -translate-y-6 sm:-translate-y-10 lg:-translate-y-16 xl:-translate-y-24 transition-all duration-300 rounded-full overflow-hidden"
+      className="relative w-[256px] h-[256px] sm:w-[336px] sm:h-[336px] lg:w-[448px] lg:h-[448px] xl:w-[544px] xl:h-[544px] flex items-center justify-center lg:-mr-28 xl:-mr-36 mt-4 lg:mt-0 -translate-y-4 sm:-translate-y-6 lg:-translate-y-10 xl:-translate-y-12 transition-all duration-300 rounded-full overflow-hidden"
     >
       {/* Central Hub */}
-      <div className="relative w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] lg:w-[270px] lg:h-[270px] xl:w-[330px] xl:h-[330px] flex flex-col items-center justify-center p-3 sm:p-4 lg:p-6 z-30 transition-all duration-300 overflow-hidden">
+      <div className="relative w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] lg:w-[216px] lg:h-[216px] xl:w-[264px] xl:h-[264px] flex flex-col items-center justify-center p-3 sm:p-4 lg:p-6 z-30 transition-all duration-300 overflow-hidden">
         {/* Hub glowing aura */}
         {hoveredTech && (
           <div 
@@ -342,7 +342,7 @@ function RotatingTechWheel() {
                 return <TechIcon className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 transition-all duration-300" />;
               })()}
             </span>
-            <span className="text-xs sm:text-sm lg:text-lg xl:text-xl font-display font-extrabold text-white mt-1 lg:mt-2 leading-tight">
+            <span className="text-[9.6px] sm:text-[11.2px] lg:text-[14.4px] xl:text-[16px] font-display font-extrabold text-white mt-1 lg:mt-2 leading-tight">
               {hoveredTech.name}
             </span>
           </motion.div>
@@ -353,7 +353,7 @@ function RotatingTechWheel() {
             animate={{ opacity: 1, scale: 1 }}
             className="flex flex-col items-center justify-center text-center z-20 w-full px-2"
           >
-            <h3 className="text-sm sm:text-lg lg:text-xl xl:text-2xl font-display font-bold text-white tracking-tight leading-snug whitespace-pre-line">
+            <h3 className="text-[11.2px] sm:text-[14.4px] lg:text-[16px] xl:text-[19.2px] font-display font-bold text-white tracking-tight leading-snug whitespace-pre-line">
               <ScrambleText text={"Technologies We\nExplore"} />
             </h3>
           </motion.div>

@@ -60,12 +60,12 @@ export default function Contact() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading matching other sections & left aligned */}
-        <div className="text-left mb-16 max-w-4xl">
-          <h2 className="text-4xl sm:text-6xl font-display font-extrabold text-white leading-none">
+        <div className="text-left mb-[40px] max-w-4xl">
+          <h2 className="text-[28.8px] sm:text-[48px] font-display font-extrabold text-white leading-none">
             <ScrambleText text="Get In Touch" />
           </h2>
-          <div className="h-1.5 w-24 bg-gradient-to-r from-brand-blue via-brand-red to-brand-green mt-6 rounded-full" />
-          <p className="text-lg sm:text-xl font-sans font-normal text-zinc-300 mt-8 leading-relaxed">
+          <div className="h-1.5 w-24 bg-gradient-to-r from-brand-blue via-brand-red to-brand-green mt-[19.2px] rounded-full" />
+          <p className="text-[14.4px] sm:text-[16px] font-sans font-normal text-zinc-300 mt-[25.6px] leading-relaxed">
             Have questions or partnership suggestions? Submit a query message and our core team will respond promptly.
           </p>
         </div>

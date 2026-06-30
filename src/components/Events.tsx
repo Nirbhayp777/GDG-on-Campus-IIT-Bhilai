@@ -219,7 +219,7 @@ export default function Events() {
   };
 
   return (
-    <section ref={sectionRef} id="events" className="relative pt-10 pb-24 overflow-hidden bg-black select-none">
+    <section ref={sectionRef} id="events" className="relative pt-4 pb-12 overflow-hidden bg-black select-none">
       
       {/* Background radial glows to match About section */}
       <div className="absolute top-1/4 right-0 w-80 h-80 bg-brand-green/5 rounded-full filter blur-[100px] pointer-events-none" />
@@ -228,14 +228,14 @@ export default function Events() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading matching About styling */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-[12px] gap-8">
           <div className="text-left max-w-3xl">
-            <h2 className="text-4xl sm:text-6xl font-display font-extrabold text-white leading-none">
+            <h2 className="text-[28.8px] sm:text-[48px] font-display font-extrabold text-white leading-none">
               <ScrambleText text="Sessions & Workshops" />
             </h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-red via-brand-yellow to-brand-green mt-6 rounded-full" />
-            <p className="text-lg sm:text-xl font-sans font-normal text-zinc-300 mt-8 leading-relaxed">
-              Explore our developer workshops, technical tracks, study jams, and community meetups designed to bridge academic study with production implementations.
+            <div className="h-1.5 w-24 bg-gradient-to-r from-brand-red via-brand-yellow to-brand-green mt-[19.2px] rounded-full" />
+            <p className="text-[14.4px] sm:text-[16px] font-sans font-normal text-zinc-300 mt-[25.6px] leading-relaxed">
+              Explore study jams, developer workshops, and technical sessions bridging academic concepts with production implementations.
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export default function Events() {
           >
             {/* Carousel Inner 3D Wrapper */}
             <div 
-              className="relative w-0 h-0"
+              className="relative w-0 h-0 -translate-y-10"
               style={{ transformStyle: "preserve-3d" }}
             >
               <AnimatePresence mode="popLayout">

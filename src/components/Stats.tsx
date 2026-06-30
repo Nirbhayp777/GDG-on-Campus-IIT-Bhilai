@@ -66,10 +66,9 @@ export default function Stats() {
   return (
     <section 
       id="stats" 
-      className="relative w-full pt-44 pb-12 z-20 overflow-hidden bg-gradient-to-b from-transparent via-black/50 via-black/90 to-black backdrop-blur-[16px]"
+      className="relative w-full pt-32 pb-12 z-20 overflow-hidden"
       style={{
-        maskImage: 'linear-gradient(to bottom, transparent 0%, black 70%)',
-        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 70%)',
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.5) 38%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 1) 100%)',
       }}
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
