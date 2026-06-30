@@ -1,0 +1,299 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Google Sans", "Product Sans", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Google Sans", "Product Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-blue: #4285F4;
+  --color-brand-red: #EA4335;
+  --color-brand-yellow: #FBBC05;
+  --color-brand-green: #34A853;
+  --color-brand-purple: #764ba2;
+  --color-brand-purple-light: #667eea;
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-blob: blob 10s infinite;
+  --animate-blob-reverse: blob-reverse 12s infinite;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.15); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+@keyframes blob-reverse {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(-30px, 50px) scale(0.9); }
+  66% { transform: translate(20px, -20px) scale(1.15); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 10, 25, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  border: 2px solid rgba(15, 10, 25, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Glassmorphism Presets */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.22);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 40px 0 rgba(118, 75, 162, 0.35);
+  transform: translateY(-4px);
+}
+
+.glass-navbar {
+  background: rgba(4, 4, 6, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.text-gradient-google {
+  background: linear-gradient(to right, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Google Colors rotating glow */
+@keyframes google-rotate-glow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-google-glow {
+  position: relative;
+  background: #111112; /* carbon dark body */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* clean, sleek graphite outline */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  isolation: isolate;
+  cursor: pointer;
+}
+
+.btn-google-glow:hover {
+  background: #18181b; /* slightly lighter dark shade on hover */
+  border-color: rgba(255, 255, 255, 0.2); /* subtly brighter graphite outline */
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Hide glow elements completely for now */
+.btn-google-glow::before {
+  display: none !important;
+}
+
+.btn-google-glow .glow-bg {
+  display: none !important;
+}
+
+.btn-google-glow .glow-mask {
+  display: none !important;
+}
+
+/* Slide-out arrow hover effect for Join Chapter button */
+.header-link-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 28px; /* space for the icon to slide out on hover */
+}
+
+.header-link-wrapper a {
+  display: block;
+  width: 140px;
+  height: 38px;
+  line-height: 34px; /* offset for border */
+  font-weight: 700;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #111112;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px; /* rounded-full pill shape */
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+/* Custom Conic Gradient Rotating Border */
+.header-link-wrapper a.border-gradient {
+  --c: #111112;
+  --p: 12%;
+  background: linear-gradient(var(--c), var(--c)) padding-box,
+    conic-gradient(
+        from var(--gradient-angle, 0deg),
+        transparent,
+        #ffffff var(--p),
+        transparent calc(var(--p) * 2)
+      )
+      border-box;
+  border: 2px solid transparent;
+}
+
+.header-link-wrapper .icon {
+  width: 38px;
+  height: 38px;
+  border: 2.5px solid transparent;
+  border-radius: 9999px; /* matching rounded-full shape */
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-link-wrapper .icon svg {
+  width: 16px;
+  height: 16px;
+  transform: rotate(-45deg);
+  fill: #4285F4; /* Modern Google Blue */
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-link-wrapper a:hover {
+  width: 105px;
+  border: 2.5px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+.header-link-wrapper a:hover + .icon {
+  border: 2.5px solid #ffffff;
+  right: -32px; /* sliding out to the right */
+}
+
+.header-link-wrapper a:hover + .icon svg {
+  fill: #ffffff;
+}
+
+/* Slide-out rainbow border hover effect for desktop navbar links */
+#desktop-menu a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#desktop-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px; /* sharp, sleeker 3px rainbow bar */
+  width: 100%;
+  background: linear-gradient(90deg, #EA4335, #FBBC05, #34A853, #FBBC05, #EA4335);
+  background-size: 200% auto;
+  transition: transform .5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-101%);
+}
+
+#desktop-menu a:hover::after,
+#desktop-menu a.active::after {
+  transform: translateX(0%);
+  animation: gradient-89 3s linear infinite;
+}
+
+@keyframes gradient-89 {
+  0% { background-position: 100% 0%; }
+  50% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+/* Force GPU acceleration on the main ScrollSmoother content container */
+#smooth-content {
+  will-change: transform;
+}
+
+/* Submit Message Button styling in Contact section */
+#contact-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  max-width: 100%;
+  height: 48px;
+  font-size: 12px;
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background: transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+#contact-submit-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+#contact-submit-btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #4285F4;
+  transition: all .35s;
+  z-index: 1;
+}
+
+#contact-submit-btn:hover {
+  color: #ffffff;
+  border-color: #4285F4;
+}
+
+#contact-submit-btn:hover::after {
+  width: 100%;
+}
+
+#contact-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
